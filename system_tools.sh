@@ -2,13 +2,13 @@
 # Enhanced script functionality and debugged issues with assistance from ChatGPT
 echo "Enter Password"
 read -s password # Use -s to hide the input
-if [[ $password == "0659" ]]; then # Check password
+if [[ $password == "1234" ]]; then # Check password
     echo "Password correct" # Confirm correct password
 else
     echo "Incorrect"
     exit 1  # Exit if incorrect
-fi
-while true; do # primary loop
+fi # close if/esle for $password 
+while true; do # (primary loop) WHILE TRUE 
     echo -e "Please make a selection:" && echo -e
     echo -e "System Tools"
     echo "1. Update Linux"
@@ -22,7 +22,7 @@ while true; do # primary loop
     echo "8. Devices on Active Network"
     echo -e "9. Exit"
 read answer # Save Input
-    # If/Else (secondary) loop from input
+    # If/Else (secondary) loop 
     if [[ $answer == 1 ]]; then # Update
         sudo apt update
     elif [[ $answer == 2 ]]; then # Upgrade
